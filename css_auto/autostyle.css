@@ -1,0 +1,456 @@
+html, body {
+	width: 100%;
+	margin: 0; padding: 0;
+    background-color: rgb(197, 197, 197);
+}
+h1, ul, li, a, div, p {
+	margin: 0; padding: 0;
+	color: #000;
+	list-style: none;
+	text-decoration: none;
+}
+h2 {
+	line-height: 30px;
+	margin-left: 50px;
+}
+.foot3{
+	margin-top:100px;
+}
+.btn-group{
+	margin-left: 35%;
+    margin-bottom: 15px;
+}
+.btn{
+	background: #6e6e6e;
+	color: whitesmoke;
+	font-size: 20px;
+	width: 70px; height: 40px;
+	margin: 5px;
+}
+.padd{
+	font-size: 20px;
+	line-height: 40px;
+	margin-left: 40px;
+	margin-bottom: 50px;
+	margin-right: 25px;
+	margin-top: 25px;
+}
+header {
+	background-color: #ff4646;
+	overflow: hidden;
+	width: 100%;
+}
+header .logo {
+	display: inline-block;
+	padding: 1px 0 10px 20px;
+}
+header .logo a{
+	color: #fff;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	font-size: 30px;
+	font-style: italic;	
+	text-decoration: none;
+}
+header .menu {
+	float: right;
+	margin-right: 300px;
+}
+header .menu li {
+	display: inline-block;
+	padding: 15px;
+}
+header .menu li a {
+	font-size: 15px;
+	color: #fff;
+	text-transform: uppercase;
+	transition: all 0.3s;
+}
+header .menu li a:hover {
+	background-color: #fff;
+	color: #000;
+	padding: 36px 20px 35px 25px;
+}
+.imgs{
+	display: inline;
+	margin: 0px 0 0 0px;
+}
+.cont{
+	font-size: 20px;
+	color: #1d0303;
+	margin: 0 0 50px 0;
+}
+.m_icon{
+	width: 55px; height: 55px;
+	margin-right: 40px;
+	transition: 1s linear;
+}
+.m_icon:hover{
+	transform: rotateY(180deg);
+}
+.d_icon{
+	width: 55px; height: 55px;
+	margin-right: 40px;
+	opacity: .85;
+	filter: grayscale(100%);
+	transition: .5s linear;
+}
+.d_icon:hover{
+	opacity: 1;
+	filter: grayscale(0%);
+	transform: rotateZ(45deg);
+}
+img{
+	width: 300px;
+	margin-left: 10px;
+}
+.showimg::before{
+	content: "Посмотреть фото :";
+	font-style:italic; 
+	color: #500000;
+	font-size: 15px;
+	margin-left: 150px;
+	cursor: pointer;
+} 
+.hideimg::before{
+	content: "Скрыть фото :";
+	color: #500000;
+	font-style:italic; 
+	font-size: 15px;
+	margin-left: 150px;
+	cursor: pointer;
+}
+.cars{
+	display: none;
+	width: 600px; 
+	margin-left: 170px;
+}
+.mostrar{
+	display: inline-block;
+}
+.map{
+	float: right;
+}
+.logo-map{
+	width: 70px; height: 70px;
+	border-radius: 50%;
+	background: url(file:///C:/Users/USER/Desktop/Auto%20Sale2/img/map70.jpg) no-repeat 50% 50%;
+	margin: -10px 50px 0 50px;
+	transition: .5s linear;
+
+}.logo-map:hover{
+	width: 70px; height: 70px;
+	border-radius: 50%;
+	background: url(file:///C:/Users/USER/Desktop/Auto%20Sale2/img/70.jpg) no-repeat 50% 50%;
+	margin: -10px 50px 0 50px;
+	transform: rotate(-360deg);
+}
+.catalog img{
+	width: 320px; height: 220px;
+	padding-bottom: 10px;
+}
+	/* Adaptivity */
+	.mbars{
+		display: none;
+		width: 40px; height: 20px;
+		position: relative;
+		margin: 50px auto;
+		transform: rotate(0deg);
+		-webkit-transform: rotate(0deg);
+		-moz-transform: rotate(0deg);
+		-o-transform: rotate(0deg);
+		transition: .5s ease-in-out;
+		-webkit-transition: .5s ease-in-out;
+		-moz-transition: .5s ease-in-out;
+		-o-transition: .5s ease-in-out;
+		cursor: pointer;
+	}
+	
+	.mbars span{
+		display: block;
+		position: absolute;
+		width: 100%; height: 5px;
+		background: whitesmoke;
+		border-radius: 10px;
+		left: 0;
+		opacity: 1;
+		transform: rotate(0deg);
+		-webkit-transform: rotate(0deg);
+		-moz-transform: rotate(0deg);
+		-o-transform: rotate(0deg);
+		transition: .25s ease-in-out;
+		-webkit-transition: .25s ease-in-out;
+		-moz-transition: .25s ease-in-out;
+		-o-transition: .25s ease-in-out;
+	}
+	.mbars span:nth-child(1){top: 0px;}
+	.mbars span:nth-child(2){top: 13px;}
+	.mbars span:nth-child(3){top: 13px;}
+	.mbars span:nth-child(4){top: 26px;}
+	
+	.mbars.open span:nth-child(1),.mbars.open span:nth-child(4){
+		top: 13px;
+		width: 0%;
+		left: 50%;
+	}
+	.mbars.open span:nth-child(2){
+		transform: rotate(45deg);
+		-webkit-transform: rotate(45deg);
+		-moz-transform: rotate(45deg);
+		-o-transform: rotate(45deg);
+	}
+	.mbars.open span:nth-child(3){
+		transform: rotate(-45deg);
+		-webkit-transform: rotate(-45deg);
+		-moz-transform: rotate(-45deg);
+		-o-transform: rotate(-45deg);
+	}
+
+@media screen and (max-width: 930px){
+	.mbars{
+		display: block;
+		width: 40px; height: 20x;
+		position: relative;
+		margin: -50px 20px 0 auto;
+		padding-bottom: 50px;
+		transform: rotate(0deg);
+		-webkit-transform: rotate(0deg);
+		-moz-transform: rotate(0deg);
+		-o-transform: rotate(0deg);
+		transition: .5s ease-in-out;
+		-webkit-transition: .5s ease-in-out;
+		-moz-transition: .5s ease-in-out;
+		-o-transition: .5s ease-in-out;
+		cursor: pointer;
+	}
+	header .menu {
+		display: block;
+		float: left;
+		margin: 0 auto 0 20px;
+	}
+	header .menu li {
+		display: none;
+		padding: 15px;
+	}
+	header .menu li a {
+		font-size: 15px;
+		color: #fff;
+		text-transform: uppercase;
+		transition: all 0.3s;
+	}
+	header .menu li a:hover {
+		background-color: transparent;
+		color: white;
+		font-weight: 800;
+		padding: 36px 20px 35px 15px;
+		text-decoration: none;
+	}
+	.cars{
+		display: none;
+		width: 600px; 
+		margin-left: 70px;
+	}
+	.mostrar{
+		display: inline-block;
+	}
+	.cont{
+		display: block;
+		font-size: 20px;
+		color: #1d0303;
+		margin: 0 50px 50px 0;
+	}
+	.row{
+		display: block;
+		padding: 0 100px 0 0;
+	}
+	.foot3{
+		margin-top:100px;
+	}
+	.btn-group{
+		margin-left: 25%;
+		margin-bottom: 15px;
+	}
+	.btn{
+		background: #6e6e6e;
+		color: whitesmoke;
+		font-size: 20px;
+		width: 70px; height: 40px;
+		margin: 5px;
+	}
+}
+
+@media screen and (max-width: 670px){
+	.cars{
+		display: none;
+		width: 500px; 
+		margin-left: 50px;
+	}
+	.mostrar{
+		display: inline-block;
+	}
+	.row{
+		display: block;
+		padding: 0 0 0 0;
+	}
+	.cont{
+		display: block;
+		font-size: 20px;
+		color: #1d0303;
+		margin: 0 0 50px 0;
+	}	
+	.imgs{
+		display: inline;
+		margin: 0px 0 0 50px;
+	}
+	
+	.foot3{
+		margin-top:100px;
+	}
+	.btn-group{
+		margin-left: 20%;
+		margin-bottom: 15px;
+	}
+	.btn{
+		background: #6e6e6e;
+		color: whitesmoke;
+		font-size: 20px;
+		width: 70px; height: 40px;
+		margin: 5px;
+	}
+	.logo-map{
+		width: 70px; height: 70px;
+		border-radius: 50%;
+		background: url(file:///C:/Users/USER/Desktop/Auto%20Sale2/img/map70.jpg) no-repeat 50% 50%;
+		margin: 5px 50px 0 50px;
+		transition: .5s linear;
+	}.logo-map:hover{
+		width: 70px; height: 70px;
+		border-radius: 50%;
+		background: url(file:///C:/Users/USER/Desktop/Auto%20Sale2/img/70.jpg) no-repeat 50% 50%;
+		margin: 5px 50px 0 50px;
+		transform: rotate(-360deg);
+	}
+} 
+
+@media screen and (max-width: 575px){
+	.cars{
+		display: none;
+		width: 95%; 
+		margin-left: 5px;
+	}
+	.mostrar{
+		display: inline-block;
+	}
+	.foot3{
+		margin-top:100px;
+	}
+	.btn-group{
+		margin-left: 30px;
+		margin-bottom: 15px;
+	}
+	.btn{
+		background: #6e6e6e;
+		color: whitesmoke;
+		font-size: 20px;
+		width: 60px; height: 36px;
+		margin: 5px;
+	}
+	.imgs{
+		display: block;
+		margin: 0 0 0 0px;
+	}
+	.m_icon{
+		display: inline-block;
+		width: 55px; height: 55px;
+		margin-right: 40px;
+		margin-bottom: 30px;	
+		transition: 1s linear;
+	}
+	.m_icon:hover{
+		transform: rotateY(180deg);
+	}
+	.d_icon{
+		display: inline-block;	
+		width: 55px; height: 55px;
+		margin-bottom: 30px;
+		margin-right: 40px;
+		opacity: .85;
+		filter: grayscale(100%);
+		transition: .5s linear;
+	}
+	.d_icon:hover{
+		opacity: 1;
+		filter: grayscale(0%);
+		transform: rotateZ(45deg);
+	}
+	.logo-map{
+		width: 60px; height: 60px;
+		border-radius: 50%;
+		background: url(file:///C:/Users/USER/Desktop/Auto%20Sale2/img/map70.jpg) no-repeat 50% 50%;
+		margin: 5px 50px 0 50px;
+		transition: .5s linear;
+	}.logo-map:hover{
+		width: 60px; height: 60px;
+		border-radius: 50%;
+		background: url(file:///C:/Users/USER/Desktop/Auto%20Sale2/img/70.jpg) no-repeat 50% 50%;
+		margin: 5px 50px 0 50px;
+		transform: rotate(-360deg);
+	}
+}
+
+
+@media screen and (max-width: 380px){
+	.showimg::before{
+		content: "Посмотреть фото :";
+		font-style:italic; 
+		color: #500000;
+		font-size: 15px;
+		margin-left: 100px;
+		cursor: pointer;
+	} 
+	.hideimg::before{
+		content: "Скрыть фото :";
+		color: #500000;
+		font-style:italic; 
+		font-size: 15px;
+		margin-left: 100px;
+		cursor: pointer;
+	}
+	.foot3{
+		margin-top:100px;
+	}
+	.btn-group{
+		margin-left: 20px;
+		margin-bottom: 15px;
+	}
+	.btn{
+		background: #6e6e6e;
+		color: whitesmoke;
+		font-size: 20px;
+		width: 50px; height: 33px;
+		margin: 5px;
+	}
+	.m_icon{
+		display: inline-block;
+		width: 50px; height: 50px;
+		margin-right: 40px;
+		margin-bottom: 30px;	
+		transition: 1s linear;
+	}
+	.m_icon:hover{
+		transform: rotateY(180deg);
+	}
+	.d_icon{
+		display: inline-block;	
+		width: 50px; height: 50px;
+		margin-bottom: 30px;
+		margin-right: 40px;
+		opacity: .85;
+		filter: grayscale(100%);
+		transition: .5s linear;
+	}
+	.d_icon:hover{
+		opacity: 1;
+		filter: grayscale(0%);
+		transform: rotateZ(45deg);
+	}
+}
